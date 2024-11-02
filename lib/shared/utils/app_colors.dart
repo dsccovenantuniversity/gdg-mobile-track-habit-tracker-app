@@ -9,7 +9,7 @@ const blueColor = Color.fromRGBO(8, 86, 207, 1);
 const lightGreen2 = Color.fromRGBO(12, 188, 139, 1);
 const whiteColor = Colors.white;
 
-const scaffoldBackGroundColor = Color.fromRGBO(255, 250, 244, 1);
+const scaffoldBackGroundColor = Colors.white;
 
 const primaryColor = Color.fromRGBO(252, 243, 203, 1.0);
 

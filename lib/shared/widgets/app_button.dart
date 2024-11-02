@@ -69,10 +69,10 @@ class _AppButtonState extends State<AppButton> {
             ),
             // disabledBackgroundColor: lightGrey3,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(7),
+              borderRadius: BorderRadius.circular(4),
             ),
             backgroundColor: widget.backgroundColor ?? lightGreen2,
-            minimumSize: widget.buttonSize ?? const Size(355, 38),
+            minimumSize: widget.buttonSize ?? const Size(350, 40),
           ),
           child: widget.text.isNotEmpty
               ? AppText(

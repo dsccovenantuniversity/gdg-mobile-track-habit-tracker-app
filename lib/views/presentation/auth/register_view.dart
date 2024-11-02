@@ -6,31 +6,34 @@ import 'package:gdg_habit_tracker_app/shared/widgets/app_button.dart';
 import 'package:gdg_habit_tracker_app/shared/widgets/app_column.dart';
 import 'package:gdg_habit_tracker_app/shared/widgets/app_textfield.dart';
 import 'package:gdg_habit_tracker_app/shared/widgets/shared.dart';
-import 'package:gdg_habit_tracker_app/views/presentation/auth/register_view.dart';
+import 'package:gdg_habit_tracker_app/views/presentation/auth/login_view.dart';
 
-class SignInView extends StatefulWidget {
-  const SignInView({super.key});
+class RegisterView extends StatefulWidget {
+  const RegisterView({super.key});
 
   @override
-  State<SignInView> createState() => _SignInViewState();
+  State<RegisterView> createState() => _RegisterViewState();
 }
 
-class _SignInViewState extends State<SignInView> {
+class _RegisterViewState extends State<RegisterView> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return AppColumn(
+      isScrollable: true,
       children: [
         addHeight(10),
-        Image.asset(signInPicture),
-        addHeight(30),
+        Image.asset(registerInPicture),
+        addHeight(20),
         Center(
           child: Text.rich(
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   fontSize: 19,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                 ),
             TextSpan(
               text: "Welcome Back! to",
@@ -39,7 +42,7 @@ class _SignInViewState extends State<SignInView> {
                   text: " Lifestyle",
                   style: Theme.of(context).textTheme.displayLarge!.copyWith(
                       fontSize: 19,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                       color: lightGreen2),
                 ),
               ],
@@ -54,6 +57,10 @@ class _SignInViewState extends State<SignInView> {
         AppTextField(
           controller: passwordController,
           labelText: 'Password',
+        ),
+        AppTextField(
+          controller: confirmPasswordController,
+          labelText: 'Confirm Password',
         ),
         addHeight(30),
         AppButton(
@@ -96,18 +103,18 @@ class _SignInViewState extends State<SignInView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const AppText(
-              text: "Don't have an account?",
+              text: "Already have an account? ",
               fontSize: 14,
               fontWeight: FontWeight.w400,
             ),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const RegisterView(),
+                  builder: (context) => const SignInView(),
                 ));
               },
               child: const AppText(
-                text: "Register now",
+                text: "Get in now!",
                 color: blueColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w500,

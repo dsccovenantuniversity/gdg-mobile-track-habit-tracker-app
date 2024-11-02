@@ -8,6 +8,7 @@ class AppTextField extends StatelessWidget {
   final bool isGradientBorder;
   final BorderRadius? borderRadius;
   final String? header;
+  final String? labelText;
   final TextStyle? hintStyle;
   final double headerFontSize;
   final String hintText;
@@ -31,6 +32,7 @@ class AppTextField extends StatelessWidget {
     this.header,
     this.borderRadius,
     this.keyboardType,
+    this.labelText,
     this.headerFontSize = 17.0,
     this.hintStyle,
     this.hintText = '',
@@ -67,11 +69,16 @@ class AppTextField extends StatelessWidget {
             validator: validator,
             maxLines: maxLines,
             minLines: null,
-            keyboardType: keyboardType,
+            keyboardType: keyboardType ?? TextInputType.name,
             style: const TextStyle(color: blackColor),
             decoration: InputDecoration(
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: borderColor ?? lightGreen2),
+                borderRadius: BorderRadius.circular(4),
+              ),
               hintText: hintText,
               prefixIcon: prefixWidget,
+              labelText: labelText,
               suffixIcon: suffixWidget,
               hintStyle:
                   hintStyle ?? const TextStyle(color: lightGrey, fontSize: 18),
@@ -79,9 +86,8 @@ class AppTextField extends StatelessWidget {
               filled: true,
 
               border: OutlineInputBorder(
-                borderSide:
-                    BorderSide(color: borderColor ?? extraLightGreyColor),
-                borderRadius: BorderRadius.circular(20),
+                borderSide: BorderSide(color: borderColor ?? lightGreen2),
+                borderRadius: BorderRadius.circular(4),
               ),
             ),
             controller: controller,
