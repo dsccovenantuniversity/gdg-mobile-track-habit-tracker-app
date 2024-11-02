@@ -1,3 +1,6 @@
+//png
+String signInPicture = 'sign_in_picture'.png;
+
 extension ImageExtension on String {
   String get png => 'assets/pngs/$this.png';
   String get svg => 'assets/svgs/$this.svg';

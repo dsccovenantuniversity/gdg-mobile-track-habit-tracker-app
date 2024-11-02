@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 const blackColor = Colors.black;
+
+const lightBlueColor = Color.fromRGBO(175, 217, 254, 0.9);
+const lightGreenColor = Color.fromRGBO(127, 214, 194, 0.7);
+const lightYellowColor = Color.fromRGBO(234, 238, 210, 0.6);
+const blueColor = Color.fromRGBO(8, 86, 207, 1);
+const lightGreen2 = Color.fromRGBO(12, 188, 139, 1);
 const whiteColor = Colors.white;
 
 const scaffoldBackGroundColor = Color.fromRGBO(255, 250, 244, 1);
