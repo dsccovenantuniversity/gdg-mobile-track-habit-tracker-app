@@ -72,7 +72,7 @@ class _AppButtonState extends State<AppButton> {
               borderRadius: BorderRadius.circular(4),
             ),
             backgroundColor: widget.backgroundColor ?? lightGreen2,
-            minimumSize: widget.buttonSize ?? const Size(350, 40),
+            minimumSize: widget.buttonSize ?? const Size(390, 40),
           ),
           child: widget.text.isNotEmpty
               ? AppText(
